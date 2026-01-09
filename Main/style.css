@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.rubrik {
+    background-color: darkgray;
+    padding: 20px;
+}
+
+.paragraf {
+    position: relative;
+    overflow: visible; 
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+    max-width: 70ch;
+}
+
+.paragraf article {
+    position: static;
+    will-change: auto;
+    max-width: 70ch;
+    line-height: inherit;
+}
+
+
+.char, .word {
+    display: inline-block;
+    position: relative; 
+    vertical-align: top;
+    white-space: pre-wrap; 
+    overflow: visible; 
+    color: transparent; 
+}
+
+.char .inner, .word .inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform;
+    display: inline-block;
+    pointer-events: none;
+    transform-origin: center center;
+    color: #111;
+    z-index: 60;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.9);
+}
+
+.effect-fallback {
+    letter-spacing: -0.6px;
+    line-height: 0.9;
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+}
+
+.paragraf .moving-clone {
+    display: none !important;
+}
